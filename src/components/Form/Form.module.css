@@ -57,3 +57,24 @@
     justify-content: right;
 }
 
+@media (max-width: 720px) {
+    .form {
+        margin: 113px 0 0 0;
+        padding: 60px 20px 32px 20px;
+        z-index: 10;
+        background-color: #fff;
+        border-radius: 8px;
+        position: relative;
+    }
+
+    .formMain {
+        margin: 0 0 0 0;
+    }
+
+    .formBottom {
+        position: absolute;
+        bottom: -100px;
+        right: 0;
+    }
+}
+

@@ -58,3 +58,41 @@
     font-weight: 700;
     color: #F7F4FF;
 }
+
+@media (max-width: 720px) {
+
+    .sidebar {
+        padding: 16px 0 0 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+        background-image: url('../../../public/images/bg-sidebar-mobile.svg');
+        border-radius: 0;
+    }
+
+    .stepList {
+        width: 60%;
+        height: 70px;
+        flex-direction: row;
+    }
+
+
+    .stepItem:not(:last-child) {
+        margin: 0 0 0 0;
+    }
+
+    .stepId {
+        margin: 0 0 0 0;
+        width: 50px;
+        height: 50px;
+    }
+
+    .stepFlex {
+        display: none;
+    }
+}

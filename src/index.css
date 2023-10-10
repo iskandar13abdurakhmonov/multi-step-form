@@ -55,6 +55,7 @@ body {
 
 .main {
     flex: 1 1 auto;
+    position: relative;
 }
 
 [class*="__container"] {
@@ -69,4 +70,20 @@ body {
     align-items: center;
     justify-content: center;
     
+}
+
+@media (max-width: 720px) {
+    .containerMain {
+        padding: 0 0 105px 0;
+    }
+
+    [class*="__container"] {
+        max-width: 1440px;
+        margin: 0;
+        padding: 0 15px;
+    }
+
+    .footer {
+        padding:100px 0 0 0;
+    }
 }
