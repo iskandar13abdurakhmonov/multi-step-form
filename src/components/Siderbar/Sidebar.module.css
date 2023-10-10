@@ -1,0 +1,12 @@
+.sidebar {
+    max-width: 274px;
+    background-image: url('../../../public/images/bg-sidebar-desktop.svg');
+}
+
+.stepList {
+    width: 100%;
+}
+
+.stepItem {
+    max-width: 150px;
+}
