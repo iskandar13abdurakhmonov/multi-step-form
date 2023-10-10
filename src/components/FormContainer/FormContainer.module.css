@@ -1,5 +1,11 @@
 .formContainer {
+    padding: 16px;
     max-width: 940px;
     max-height: 600px;
     display: flex;
+    background-color: #fff;
+    border-radius: 14px;
+    box-shadow: 0px 4px 9px -6px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 4px 9px -6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 4px 9px -6px rgba(0, 0, 0, 0.75);
 }
