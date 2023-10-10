@@ -1,12 +1,60 @@
 .sidebar {
+    padding: 40px 92px 300px 32px;
     max-width: 274px;
     background-image: url('../../../public/images/bg-sidebar-desktop.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 9px;
 }
 
 .stepList {
-    width: 100%;
+    width: 167px;
+    display: flex;
+    flex-direction: column;
 }
 
 .stepItem {
-    max-width: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.stepItem:not(:last-child) {
+    margin: 0 0 32px 0;
+}
+
+.stepId {
+    margin: 0 16px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: 500;
+    color: #F7F4FF;
+    background-color: transparent;
+    border: 1px solid #F7F4FF;
+}
+
+.stepFlex {
+    display: flex;
+    flex-direction: column;
+}
+
+.stepNum {
+    margin: 0 0 9px 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: #F7F4FF;
+}
+
+.stepText {
+    width: 100%;
+    margin: 0 0 0 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #F7F4FF;
 }

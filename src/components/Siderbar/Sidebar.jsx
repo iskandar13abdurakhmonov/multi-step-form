@@ -32,7 +32,7 @@ function Sidebar() {
                 <div className={style.stepId}>{step.stepId}</div>
                 <div className={style.stepFlex}>
                     <span className={style.stepNum}>{step.stepNum}</span>
-                    <p className={style.stepTExt}>{step.stepText}</p>
+                    <p className={style.stepText}>{step.stepText}</p>
                 </div>
             </li>)}
         </ul>
