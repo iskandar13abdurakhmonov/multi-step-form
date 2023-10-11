@@ -1,7 +1,7 @@
 import React from 'react'
 import style from './Sidebar.module.css'
 
-function Sidebar({ active, steps }) {
+function Sidebar({ active, steps, activeForm, onNextClick, onPrevClick, onaHandleClick  }) {
 
     return (
         <div className={style.sidebar}>
@@ -20,6 +20,10 @@ function Sidebar({ active, steps }) {
                         </div>
                     </li>
                 ))}
+                <button onClick={() => onaHandleClick()}>click</button>
+                <button onClick={() => onPrevClick(1)}>Go Back</button>
+                {activeForm}
+                <button onClick={() => onNextClick()}>Next Step</button>
             </ul>
         </div>
     )

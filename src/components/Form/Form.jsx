@@ -2,7 +2,7 @@ import React from 'react'
 import style from './Form.module.css'
 import Button from '../../UI/Button/Button'
 
-function Form({ handleClick, onNextClick, onPrevClick, activeForm }) {
+function Form({ handleClick }) {
     return (
         <form
             id={1}
@@ -56,9 +56,7 @@ function Form({ handleClick, onNextClick, onPrevClick, activeForm }) {
                 />
             </div>
             <div className={style.formBottom}>
-                <button onClick={() => onPrevClick()}>Prev Step</button>
-                {activeForm}
-                <button onClick={() => onNextClick()}>Next Step</button>
+                
             </div>
         </form>
     )
