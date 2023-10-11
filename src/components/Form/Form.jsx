@@ -2,11 +2,13 @@ import React from 'react'
 import style from './Form.module.css'
 import Button from '../../UI/Button/Button'
 
-function Form() {
+function Form({ handleClick, onNextClick, onPrevClick, activeForm }) {
     return (
         <form
-            onSubmit={(e) => {e.preventDefault()}}
-            action=""
+            id={1}
+            onSubmit={(e) => {
+                e.preventDefault()
+            }}
             className={style.form}
         >
             <div className={style.formTop}>
@@ -26,6 +28,7 @@ function Form() {
                     className={style.formInput}
                     type="text"
                     placeholder="e.g. Stephen King"
+                    onChange={(e) => e.target.value}
                 />
                 <label
                     className={style.formLabel}
@@ -37,6 +40,7 @@ function Form() {
                     className={style.formInput}
                     type="text"
                     placeholder="e.g. stephenking@lorem.com"
+                    onChange={(e) => e.target.value}
                 />
                 <label
                     className={style.formLabel}
@@ -48,10 +52,13 @@ function Form() {
                     className={style.formInput}
                     type="text"
                     placeholder="e.g. +1 234 567 890"
+                    onChange={(e) => e.target.value}
                 />
             </div>
             <div className={style.formBottom}>
-                <Button>Next Step</Button>
+                <button onClick={() => onPrevClick()}>Prev Step</button>
+                {activeForm}
+                <button onClick={() => onNextClick()}>Next Step</button>
             </div>
         </form>
     )

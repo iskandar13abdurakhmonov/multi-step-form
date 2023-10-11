@@ -39,6 +39,12 @@
     border: 1px solid #F7F4FF;
 }
 
+.active {
+    background-color: #BEE1FD;
+    color: #032450;
+    border: transparent;
+}
+
 .stepFlex {
     display: flex;
     flex-direction: column;
