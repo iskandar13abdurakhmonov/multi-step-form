@@ -1,0 +1,17 @@
+.formInput {
+    padding: 13px 0 14px 16px;
+    margin: 0 0 25px 0;
+    font-weight: 500;
+    color: #A4A5AA;
+    border: 1px solid #D9D8DC;
+    border-radius: 5px;
+    outline: none;
+}
+
+.formInput::placeholder {
+    color: #A4A5AA;
+}
+
+.formInput:not(:last-child) {
+    margin: 0 0 25px 0;
+}

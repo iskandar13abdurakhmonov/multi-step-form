@@ -2,33 +2,6 @@ import React from 'react'
 import style from './Sidebar.module.css'
 import { useLocation } from 'react-router-dom'
 
-const steps = [
-    {
-        stepId: 1,
-        stepNum: 'STEP 1',
-        stepText: 'YOUR INFO',
-        isActive: false,
-    },
-    {
-        stepId: 2,
-        stepNum: 'STEP 2',
-        stepText: 'SELECT PLAN',
-        isActive: false,
-    },
-    {
-        stepId: 3,
-        stepNum: 'STEP 3',
-        stepText: 'ADD-ONS',
-        isActive: false,
-    },
-    {
-        stepId: 4,
-        stepNum: 'STEP 4',
-        stepText: 'SUMMARY',
-        isActive: false,
-    },
-]
-
 function Sidebar() {
 
     const location = useLocation()

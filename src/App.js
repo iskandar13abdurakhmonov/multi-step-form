@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { AppProvider } from './contexts/state'
 import { useState } from 'react'
-import Form from './components/Form/Form'
+import Form from './components/Contact/Contact'
 import FormContainer from './components/FormContainer/FormContainer'
 import Sidebar from './components/Siderbar/Sidebar'
 
