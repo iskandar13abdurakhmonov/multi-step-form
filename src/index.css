@@ -72,6 +72,11 @@ body {
     
 }
 
+.react-switch-handle {
+    width: 12px;
+    height: 12px;
+}
+
 @media (max-width: 720px) {
     .containerMain {
         padding: 0 0 105px 0;

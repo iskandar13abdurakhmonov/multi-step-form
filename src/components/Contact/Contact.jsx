@@ -19,12 +19,19 @@ function Contact() {
     const watchPassword = watch('password')
     const navigate = useNavigate()
 
+    const saveData = (data) => {
+        setState({ ...state, ...data})
+        navigate('./select-plan')
+    }
+
+    console.log(state)
+
     const handleClick = () => {
         navigate('/select-plan')
     }
 
     return (
-        <Form>
+        <Form onSubmit={handleSubmit(saveData)}>
             <fieldset className={style.fieldset}>
                 <div className={style.formTop}>
                     <h1 className={style.formTitle}>Personal info</h1>
@@ -43,7 +50,6 @@ function Contact() {
                                 required: 'Name is required',
                             })}
                             id="name"
-                            placeholder={'e.g. Stephen King'}
                         />
                     </Field>
                     <Field
@@ -55,7 +61,6 @@ function Contact() {
                                 required: 'Email Address is required',
                             })}
                             id="email-address"
-                            placeholder={'e.g. stephenking@lorem.com'}
                         />
                     </Field>
                     <Field
@@ -67,10 +72,9 @@ function Contact() {
                                 required: 'Phone Number is required',
                             })}
                             id="phone-number"
-                            placeholder={'e.g. +1 234 567 890'}
                         />
                     </Field>
-                    <Button onHandleClick={handleClick}>Next Step</Button>
+                    <Button>Next Step</Button>
                 </div>
                 <div className={style.formBottom}></div>
             </fieldset>

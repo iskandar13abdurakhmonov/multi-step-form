@@ -4,14 +4,26 @@ import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 import { useAppState } from '../../contexts/state'
 import { Button } from '../../UI/Button/Button'
-import { Field } from '../../UI/Field/Field'
+import Field from '../../UI/Field/Field'
 import Form from '../../UI/Form/Form'
 import { Input } from '../../UI/Input/Input'
+import ChooseBox from '../../UI/ChooseBox/ChooseBox'
+import Switch from 'react-switch'
 
 export default function Plan() {
     const [state, setState] = useState()
+    const [isSwitchOn, setIsSwitchOn] = useState(true)
+
+    const switchChangeHandler = () => {
+        setIsSwitchOn(!isSwitchOn)
+    }
+
     const { handleSumbit, register } = useForm({ defaultValues: state })
     const navigate = useNavigate()
+
+    const handleBackClick = () => {
+        navigate('/')
+    }
 
     const saveData = (data) => {
         setState({ ...state, ...data })
@@ -22,11 +34,60 @@ export default function Plan() {
         <Form>
             <fieldset className={style.fieldset}>
                 <div className={style.formTop}>
-                    <h1 className={style.formTitle}>Personal info</h1>
+                    <h1 className={style.formTitle}>Select your plan</h1>
                     <p className={style.formTopDescr}>
-                        Please provide your name, email address, and phone
-                        number.
+                        You have the option of monthly or yearly billing
                     </p>
+                </div>
+                <div className={style.formMain}>
+                    <Field label="">
+                        <ChooseBox
+                            image={'./images/icon-arcade.svg'}
+                            text={'Arcade'}
+                            monthly={'$9/mo'}
+                            yearly={'$90/yr'}
+                        />
+                    </Field>
+                    <Field label="">
+                        <ChooseBox
+                            image={'./images/icon-advanced.svg'}
+                            text={'Advanced'}
+                            monthly={'$12/mo'}
+                            yearly={'$120/yr'}
+                        />
+                    </Field>
+                    <Field label="">
+                        <ChooseBox
+                            image={'./images/icon-pro.svg'}
+                            text={'Pro'}
+                            monthly={'$15/mo'}
+                            yearly={'$150/yr'}
+                        />
+                    </Field>
+                </div>
+                <div className={style.switch}>
+                    <label className={style.switchLabel}>Monthly</label>
+                    <Switch
+                        className={style.switchIcon}
+                        checked={isSwitchOn}
+                        offColor='#DBDBDD'
+                        uncheckedIcon={false}
+                        checkedIcon={false}
+                        onColor='#02295C'
+                        activeBoxShadow='0 0 0 0'
+                        width={38}
+                        height={20}
+                        handleDiameter={12}
+                        value={isSwitchOn}
+                        onChange={switchChangeHandler}
+                    />
+                    <label className={style.switchLabel}>Yearly</label>
+                </div>
+                <div className={style.formBottom}>
+                    <button onClick={() => handleBackClick()}>Go Back</button>
+                    <Button backgroundColor={'#022959'} onBackClick={handleBackClick}>
+                        Next Step
+                    </Button>
                 </div>
             </fieldset>
         </Form>

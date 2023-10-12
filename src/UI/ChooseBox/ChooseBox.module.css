@@ -1,0 +1,43 @@
+.chooseBox {
+    padding: 19px 0 16px 15px;
+    margin: 0 18px 0 0;
+    width: 138px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #D9D9DB;
+    border-radius: 7px;
+    transition: 0.3s ease-in;
+}
+
+.chooseBox:hover {
+    background-color: #F8F9FE;
+    border-color: #544E95;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+}
+
+.textBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.boxImage {
+    margin: 0 0 44px 0;
+    width: 40px;
+    height: 40px;
+}
+
+.boxTitle {
+    margin: 0 0 6px 0;
+    font-weight: 700;
+    color: #1D3052;
+}
+
+.boxPlan {
+    font-weight: 400;
+    color: #B9B9C3;
+}
