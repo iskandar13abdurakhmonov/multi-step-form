@@ -19,13 +19,12 @@ function Contact() {
     const watchPassword = watch('password')
     const navigate = useNavigate()
 
-    const saveData = (data) => {
-        setState({ ...state, ...data })
-        navigate('/education')
+    const handleClick = () => {
+        navigate('/select-plan')
     }
 
     return (
-        <Form onSumbit={handleSubmit(saveData)}>
+        <Form>
             <fieldset className={style.fieldset}>
                 <div className={style.formTop}>
                     <h1 className={style.formTitle}>Personal info</h1>
@@ -71,7 +70,7 @@ function Contact() {
                             placeholder={'e.g. +1 234 567 890'}
                         />
                     </Field>
-                    <Button>Next Step</Button>
+                    <Button onHandleClick={handleClick}>Next Step</Button>
                 </div>
                 <div className={style.formBottom}></div>
             </fieldset>

@@ -1,9 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { AppProvider } from './contexts/state'
-import { useState } from 'react'
-import Form from './components/Contact/Contact'
 import FormContainer from './components/FormContainer/FormContainer'
 import Sidebar from './components/Siderbar/Sidebar'
+import Contact from './components/Contact/Contact'
+import Plan from './components/Plan/Plan'
+import AddOns from './components/AddOns/AddOns'
 
 function App() {
     return (
@@ -18,7 +19,15 @@ function App() {
                                     <Routes>
                                         <Route
                                             path="/"
-                                            element={<Form />}
+                                            element={<Contact />}
+                                        />
+                                        <Route
+                                            path="/select-plan"
+                                            element={<Plan />}
+                                        />
+                                        <Route
+                                            path="/add-ons"
+                                            element={<AddOns />}
                                         />
                                     </Routes>
                                 </Router>
