@@ -25,6 +25,10 @@ export default function Plan() {
         navigate('/')
     }
 
+    const handleForwardClick = () => {
+        navigate('/add-ons')
+    }
+
     const saveData = (data) => {
         setState({ ...state, ...data })
         navigate('/add-ons')
@@ -70,7 +74,7 @@ export default function Plan() {
                     <Switch
                         className={style.switchIcon}
                         checked={isSwitchOn}
-                        offColor='#DBDBDD'
+                        offColor='#02295C'
                         uncheckedIcon={false}
                         checkedIcon={false}
                         onColor='#02295C'
@@ -84,10 +88,13 @@ export default function Plan() {
                     <label className={style.switchLabel}>Yearly</label>
                 </div>
                 <div className={style.formBottom}>
+                    {/* <button onClick={() => handleBackClick()}>Go Back</button> */}
+                    {/* <Button backgroundColor={'#022959'} handleBackClick={handleBackClick}>Go Back</Button> */}
                     <button onClick={() => handleBackClick()}>Go Back</button>
-                    <Button backgroundColor={'#022959'} onBackClick={handleBackClick}>
+                    {/* <Button backgroundColor={'#022959'} handleForwardClick={handleForwardClick}>
                         Next Step
-                    </Button>
+                    </Button> */}
+                    <button onClick={() => handleForwardClick()}>Next Step</button>
                 </div>
             </fieldset>
         </Form>

@@ -50,6 +50,7 @@ function Contact() {
                                 required: 'Name is required',
                             })}
                             id="name"
+                            placeholder={'e.g. Stephen King'}
                         />
                     </Field>
                     <Field
@@ -61,6 +62,7 @@ function Contact() {
                                 required: 'Email Address is required',
                             })}
                             id="email-address"
+                            placeholder={'e.g. stephenking@lorem.com'}
                         />
                     </Field>
                     <Field
@@ -72,9 +74,10 @@ function Contact() {
                                 required: 'Phone Number is required',
                             })}
                             id="phone-number"
+                            placeholder={'e.g. +1 234 567 890'}
                         />
                     </Field>
-                    <Button>Next Step</Button>
+                    <Button backgroundColor={'#022959'}>Next Step</Button>
                 </div>
                 <div className={style.formBottom}></div>
             </fieldset>
