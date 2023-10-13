@@ -27,7 +27,7 @@ export default function AddOns() {
 
     return (
         <Form>
-            <fieldset>
+            <fieldset className={style.fieldset}>
                 <div className={style.formTop}>
                     <h1 className={style.formTitle}>Pick add-ons</h1>
                     <p className={style.formTopDescr}>

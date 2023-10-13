@@ -3,7 +3,7 @@ import style from './ChooseBox.module.css'
 
 export default function ChooseBox({ image, text, monthly, yearly }) {
     return (
-        <div className={style.chooseBox}>
+        <button className={style.chooseBox}>
             <div className={style.box}>
                 <img
                     className={style.boxImage}
@@ -15,6 +15,6 @@ export default function ChooseBox({ image, text, monthly, yearly }) {
                     <span className={style.boxPlan}>{monthly}</span>
                 </div>
             </div>
-        </div>
+        </button>
     )
 }
