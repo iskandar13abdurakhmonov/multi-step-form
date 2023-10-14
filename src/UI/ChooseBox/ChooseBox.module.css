@@ -8,9 +8,15 @@
     border: 1px solid #D9D9DB;
     border-radius: 7px;
     transition: 0.3s ease-in;
+    cursor: pointer;
 }
 
-.chooseBox:hover {
+.chooseBox:hover{
+    background-color: #F8F9FE;
+    border-color: #544E95;
+}
+
+.chooseBoxActive {
     background-color: #F8F9FE;
     border-color: #544E95;
 }

@@ -6,6 +6,32 @@ import Form from '../../UI/Form/Form'
 import Field from '../../UI/Field/Field'
 import AddOnnSelect from '../../UI/AddOnnSelect/AddOnnSelect'
 
+const addOns = [
+    {
+        title: 'Online Service',
+        description: 'Access to multiple games',
+        monthly: '+$1/mo',
+        yearly: '+10/yr',
+        isChecked: false,
+    },
+    {
+        title: 'Larger  storage',
+        description: 'Extra 1TB of cloud save',
+        monthly: '+$2/mo',
+        yearly: '+20/yr',
+        isChecked: false,
+    },
+    {
+        title: 'Customizable profile',
+        description: 'Custom theme on your profile',
+        monthly: '+$2/mo',
+        yearly: '+20/yr',
+        isChecked: false,
+    },
+]
+
+console.log(addOns)
+
 export default function AddOns() {
     const [state, setState] = useState()
 
@@ -35,27 +61,12 @@ export default function AddOns() {
                     </p>
                 </div>
                 <div className={style.formMain}>
-                    <Field label=''>
+                    {addOns.map((addOn, idx) => (
                         <AddOnnSelect
-                            selectTitle={'Online Service'}
-                            selectDescr={'Access to multiple games'}
-                            monthly={'+$1/mo'}
+                            key={idx}
+                            addOn={addOn}
                         />
-                    </Field>
-                    <Field label=''>
-                        <AddOnnSelect
-                            selectTitle={'Larger Storage'}
-                            selectDescr={'Extra 1TB of cloud save'}
-                            monthly={'+$2/mo'}
-                        />
-                    </Field>
-                    <Field label=''>
-                        <AddOnnSelect
-                            selectTitle={'Customizable profile'}
-                            selectDescr={'Custom theme on your profile'}
-                            monthly={'+$2/mo'}
-                        />
-                    </Field>
+                    ))}
                 </div>
                 <div className={style.formBottom}>
                     {/* <button onClick={() => handleBackClick()}>Go Back</button> */}

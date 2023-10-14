@@ -15,6 +15,10 @@
     cursor: pointer;
 }
 
+.selectActive {
+    background-color: #F8F9FE;
+}
+
 .selectCheckbox {
     margin: 0 24px 0 0;
     width: 20px;

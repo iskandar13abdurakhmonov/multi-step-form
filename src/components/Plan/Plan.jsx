@@ -7,8 +7,29 @@ import { Button } from '../../UI/Button/Button'
 import Field from '../../UI/Field/Field'
 import Form from '../../UI/Form/Form'
 import { Input } from '../../UI/Input/Input'
-import ChooseBox from '../../UI/ChooseBox/ChooseBox'
+import { ChooseBox } from '../../UI/ChooseBox/ChooseBox'
 import Switch from 'react-switch'
+
+const plans = [
+    {
+        image: '/images/icon-arcade.svg',
+        text: 'Arcade',
+        monthly: '$9/mo',
+        yearly: '$90/yr'
+    },
+    {
+        image: '/images/icon-advanced.svg',
+        text: 'Advanced',
+        monthly: '$12/mo',
+        yearly: '$120/yr'
+    },
+    {
+        image: '/images/icon-pro.svg',
+        text: 'Pro',
+        monthly: '$15/mo',
+        yearly: '$150/yr'
+    }
+]
 
 export default function Plan() {
     const [state, setState] = useState()
@@ -44,30 +65,14 @@ export default function Plan() {
                     </p>
                 </div>
                 <div className={style.formMain}>
-                    <Field label="">
-                        <ChooseBox
-                            image={'./images/icon-arcade.svg'}
-                            text={'Arcade'}
-                            monthly={'$9/mo'}
-                            yearly={'$90/yr'}
-                        />
-                    </Field>
-                    <Field label="">
-                        <ChooseBox
-                            image={'./images/icon-advanced.svg'}
-                            text={'Advanced'}
-                            monthly={'$12/mo'}
-                            yearly={'$120/yr'}
-                        />
-                    </Field>
-                    <Field label="">
-                        <ChooseBox
-                            image={'./images/icon-pro.svg'}
-                            text={'Pro'}
-                            monthly={'$15/mo'}
-                            yearly={'$150/yr'}
-                        />
-                    </Field>
+                    {plans.map((plan, idx) => <ChooseBox
+                            key={idx}
+                            plan={plan}
+                            image={plan.image}
+                            text={plan.text}
+                            monthly={plan.monthly}
+                            yearly={plan.yearly}
+                        />)}
                 </div>
                 <div className={style.switch}>
                     <label className={style.switchLabel}>Monthly</label>
