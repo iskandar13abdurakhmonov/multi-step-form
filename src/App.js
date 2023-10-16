@@ -1,7 +1,6 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 import FormContainer from './components/FormContainer/FormContainer'
 import Sidebar from './components/Siderbar/Sidebar'
-import Contact from './components/Contact/Contact'
 import { GlobalStorage } from './hooks/GlobalContext'
 import Form from './components/Form/Form'
 

@@ -1,4 +1,3 @@
-import React from 'react'
 import { GlobalContext } from './GlobalContext'
 import { useContext } from 'react'
 import { useState } from 'react'
