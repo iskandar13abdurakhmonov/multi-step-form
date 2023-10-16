@@ -1,7 +1,7 @@
 .sidebar {
     padding: 40px 77px 300px 27px;
     max-width: 274px;
-    background-image: url('../../../public/images/bg-sidebar-desktop.svg');
+    background-image: url('../../assets/bg-sidebar-desktop.svg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -77,7 +77,7 @@
         display: flex;
         justify-content: center;
         max-width: 100%;
-        background-image: url('../../../public/images/bg-sidebar-mobile.svg');
+        background-image: url('../../assets/bg-sidebar-mobile.svg');
         border-radius: 0;
     }
 

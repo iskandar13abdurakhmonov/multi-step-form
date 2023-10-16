@@ -3,6 +3,7 @@ import FormContainer from './components/FormContainer/FormContainer'
 import Sidebar from './components/Siderbar/Sidebar'
 import Contact from './components/Contact/Contact'
 import { GlobalStorage } from './hooks/GlobalContext'
+import Form from './components/Form/Form'
 
 function App() {
     return (
@@ -14,12 +15,7 @@ function App() {
                             <GlobalStorage>
                                 <Router>
                                     <Sidebar />
-                                    <Routes>
-                                        <Route
-                                            path="/"
-                                            element={<Contact />}
-                                        />
-                                    </Routes>
+                                    <Form />
                                 </Router>
                             </GlobalStorage>
                         </FormContainer>
