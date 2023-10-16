@@ -1,4 +1,5 @@
 import React from "react";
+import style from './Slider.module.css'
 
 const Slider = ({ options, value, setValue }) => {
   function handleChange({ target }) {
@@ -12,7 +13,7 @@ const Slider = ({ options, value, setValue }) => {
   return (
     <>
       {options.map((option) => (
-        <label className="switch" htmlFor="toggle-button" key={option}>
+        <label className={style.switch} htmlFor="toggle-button" key={option}>
           <input
             type="checkbox"
             value={option}
@@ -21,7 +22,7 @@ const Slider = ({ options, value, setValue }) => {
             id="toggle-button"
             name="toggle-button"
           />
-          <span className="slider"></span>
+          <span className={style.slider}></span>
         </label>
       ))}
     </>

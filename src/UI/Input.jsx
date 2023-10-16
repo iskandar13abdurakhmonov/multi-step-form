@@ -1,4 +1,5 @@
 import React from "react";
+import style from './Input.module.css'
 
 const Input = ({
   id,
@@ -12,11 +13,11 @@ const Input = ({
 }) => {
   return (
     <>
-      <label htmlFor={id}>
+      <label className={style.label} htmlFor={id}>
         {label} {error && <span>{error}</span>}
       </label>
       <input
-        className={error && "error"}
+        className={`${error && "error"} ${style.input}`}
         type={type}
         id={id}
         name={id}

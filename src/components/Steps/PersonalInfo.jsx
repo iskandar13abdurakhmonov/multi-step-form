@@ -31,7 +31,7 @@ const PersonalInfo = () => {
           type="text"
           id="name"
           label="Name"
-          placeholder="e.g. Martin Scorsese"
+          placeholder="e.g. Stephen King"
           value={formData.name}
           onChange={handleChange}
           error={errors.name}
@@ -41,7 +41,7 @@ const PersonalInfo = () => {
           name="email"
           id="email"
           label="Email Address"
-          placeholder="e.g. scorsesemarty@lorem.com"
+          placeholder="e.g. stephenking@lorem.com"
           value={formData.email}
           onChange={handleChange}
           error={errors.email}

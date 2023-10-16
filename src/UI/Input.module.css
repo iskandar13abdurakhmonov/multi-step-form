@@ -1,0 +1,10 @@
+.label {
+}
+
+.input {
+    color: #9C9BA9;
+}
+
+.input::placeholder {
+    color: #9C9BA9;
+}
