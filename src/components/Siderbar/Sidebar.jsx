@@ -1,6 +1,5 @@
 import React from 'react'
 import style from './Sidebar.module.css'
-import { useLocation } from 'react-router-dom'
 import SidebarItem from './SidebarItem'
 
 function Sidebar() {
