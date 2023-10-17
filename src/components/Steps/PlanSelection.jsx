@@ -66,7 +66,7 @@ const PlanSelection = () => {
                             key={Object.keys(item)}
                         >
                             <SvgComponent />
-                            <div>
+                            <div className={styles.left}>
                                 <h2>{Object.keys(item)}</h2>
                                 {isMonthly ? (
                                     <p>

@@ -35,7 +35,7 @@ const Checkbox = ({ options, value, setValue }) => {
               checked={isChecked}
               onChange={handleChange}
             />
-            <div>
+            <div className={styles.left}>
               <h2>{option.name}</h2>
               <p>{option.description}</p>
             </div>

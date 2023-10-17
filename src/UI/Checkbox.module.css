@@ -1,67 +1,76 @@
 .checkboxWrapper {
-    display: flex;
-    width: 448px;
-    border: 1px solid #534C93;
-    gap: 1rem;
-    padding: 1.5rem 1rem;
-    align-items: center;
-    border-radius: 0.5rem;
-    cursor: pointer;
-  }
-  
-  .checkboxWrapper.active {
-    background: #F8F9FE;
-    border-color: #534C93;
+  display: flex;
+  max-width: 448px;
+  border: 1px solid #DBDADF;
+  gap: 1rem;
+  padding: 1.5rem 1rem;
+  align-items: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.left {
+  margin: 0 88px 0 0;
+}
+
+.checkboxWrapper.active {
+  background: #F8F9FE;
+  border-color: #534C93;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+}
+
+.checkboxWrapper span {
+  margin-left: auto;
+}
+
+label+label {
+  margin-top: 1rem;
+}
+
+.checkboxWrapper h2 {
+  font-weight: 500;
+  color: #112B46;
+  margin-bottom: 0.5rem;
+}
+
+.checkboxWrapper p {
+  color: #9A9AA4;
+}
+
+.checkboxWrapper span {
+  color: #7771CB;
+}
+
+.checkboxWrapper:hover,
+.checkboxWrapper:focus {
+  border-color: #534C93;
+  background: #F8F9FE;
+}
+
+.checkboxWrapper input {
+  width: 2rem;
+}
+
+@media (max-width: 940px) {
+  .checkboxWrapper {
+    padding: 0.75rem 0.5rem;
   }
 
-  .checkbox {
-    width: 20px;
-    height: 20px;
-  }
-  
-  .checkboxWrapper span {
-    margin-left: auto;
-  }
-  
-  label + label {
-    margin-top: 1rem;
-  }
-  
-  .checkboxWrapper h2 {
-    font-weight: 500;
-    color: #112B46;
-    margin-bottom: 0.5rem;
-  }
-  
-  .checkboxWrapper p {
-    color: #9A9AA4;
-  }
-  
-  .checkboxWrapper span {
-    color: #7771CB;
-  }
-  
-  .checkboxWrapper:hover,
-  .checkboxWrapper:focus {
-    border-color: #534C93;
-    background: #F8F9FE;
-  }
-  
   .checkboxWrapper input {
-    width: 2rem;
+    width: 1rem;
   }
-  
-  @media (max-width: 940px) {
-    .checkboxWrapper {
-      padding: 0.75rem 0.5rem;
-    }
-  
-    .checkboxWrapper input {
-      width: 1rem;
-    }
-  
-    .checkboxWrapper p {
-      font-size: 0.675rem;
-    }
+
+  .checkboxWrapper p {
+    font-size: 0.675rem;
   }
-  
+}
+
+@media (max-width: 720px) {
+  .left {
+    margin: 0 40px 0 0;
+  }
+}

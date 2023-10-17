@@ -1,102 +1,123 @@
 .planWrapper {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  .planWrapper.mobile {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.planWrapper.mobile {
+  flex-direction: column;
+}
+
+.durationWrapper {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem 0;
+  background: #F8F9FE;
+  border-radius: 0.5rem;
+}
+
+.durationWrapper span {
+  font-weight: 500;
+  color: #ADADB7;
+}
+
+.durationWrapper span.active {
+  color: #15294C;
+}
+
+.planItem {
+  border: 1px solid #D9D8DC;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  max-width: 136px;
+  cursor: pointer;
+}
+
+
+
+.planWrapper.mobile .planItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0.75rem;
+}
+
+.planItem.active {
+  background: #F8F9FE;
+  border-color: #524E91;
+}
+
+.planItem:hover {
+  background-color: #F8F9FE;
+  border-color: #534E98;
+}
+
+.planItem svg {
+  margin: 0 4rem 2.5rem 0;
+}
+
+.planWrapper.mobile .planItem svg {
+  margin-bottom: 0;
+}
+
+.planItem h2 {
+  font-weight: 500;
+  color: #0D1E38;
+  margin-bottom: 0.5rem;
+}
+
+.planItem p {
+  color: #95959F;
+  margin-bottom: 0.5rem;
+}
+
+.planItem span {
+  color: #2A3A53;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.flexParent {
+  display: flex;
+  align-items: flex-end;
+  flex: 1;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  align-items: flex-end;
+}
+
+:global #back {
+  background-color: var(--magnolia);
+  color: #98999D;
+}
+
+:global #back:hover {
+  color: #98999D;
+}
+
+@media (max-width: 720px) {
+  .planWrapper {
     flex-direction: column;
   }
-  
-  .durationWrapper {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    padding: 1rem 0;
-    background: var(--alabaster);
-    border-radius: 0.5rem;
-  }
-  
-  .durationWrapper span {
-    font-weight: 500;
-    color: var(--cool-gray);
-  }
-  
-  .durationWrapper span.active {
-    color: var(--marine-blue);
-  }
-  
+
   .planItem {
-    border: 1px solid #524E91;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    width: 136px;
-    cursor: pointer;
-  }
-  
-  .planWrapper.mobile .planItem {
-    width: 100%;
+    margin: 0 0 0 20px;
     display: flex;
-    align-items: center;
-    gap: 2rem;
-    padding: 0.75rem;
+    max-width: 300px;
   }
-  
-  .planItem.active {
-    background: #F8F9FE;
-    border-color: #524E91;
+
+  .left {
+    margin: 0 0 0 0;
   }
-  
-  .planItem:hover {
-    background-color: #F8F9FE;
-    border-color: #534E98;
-  }
-  
+
   .planItem svg {
-    margin-bottom: 2.5rem;
+    margin: 0 10px 0 0;
   }
-  
-  .planWrapper.mobile .planItem svg {
-    margin-bottom: 0;
-  }
-  
-  .planItem h2 {
-    font-weight: 500;
-    color: #0D1E38;
-    margin-bottom: 0.5rem;
-  }
-  
-  .planItem p {
-    color: #95959F;
-    margin-bottom: 0.5rem;
-  }
-  
-  .planItem span {
-    color: #2A3A53;
-    font-weight: 500;
-    font-size: 0.875rem;
-  }
-  
-  .flexParent {
-    display: flex;
-    align-items: flex-end;
-    flex: 1;
-  }
-  
-  .buttonWrapper {
-    display: flex;
-    justify-content: space-between;
-    flex: 1;
-    align-items: flex-end;
-  }
-  
-  :global #back {
-    background-color: var(--magnolia);
-    color: #98999D;
-  }
-  
-  :global #back:hover {
-    color: #98999D;
-  }
-  
+}

@@ -13,6 +13,7 @@
 @media (max-width: 720px) {
     .formContainer {
         padding: 0;
+        justify-content: center;
         flex-direction: column;
     }
 

@@ -40,7 +40,7 @@ const Summary = () => {
       />
       <div className={styles.summaryWrapper}>
         <div className={styles.planPriceWrapper}>
-          <div>
+          <div className={styles.left}>
             <h2>
               {plan} {duration.length ? "(Yearly)" : "(Monthly)"}
             </h2>
@@ -87,7 +87,7 @@ const Summary = () => {
               setStep(step + 1);
             }}
             id="next"
-            buttonInfo="Finish"
+            buttonInfo="Confirm"
           />
         </div>
       </div>
