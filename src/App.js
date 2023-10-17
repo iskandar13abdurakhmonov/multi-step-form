@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { BrowserRouter as Router } from 'react-router-dom'
 import FormContainer from './components/FormContainer/FormContainer'
 import Sidebar from './components/Siderbar/Sidebar'
@@ -21,7 +22,23 @@ function App() {
                     </div>
                 </main>
                 <footer className="footer">
-                    <div className="footer__container">footer</div>
+                    <div className="footer__container">
+                        <div class="attribution">
+                            Challenge by
+                            <a
+                                href="https://www.frontendmentor.io?ref=challenge"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Frontend Mentor
+                            </a>
+                            . Coded by
+                            <a href="https://www.frontendmentor.io/profile/iskandar13abdurakhmonov">
+                                eescan
+                            </a>
+                            .
+                        </div>
+                    </div>
                 </footer>
             </div>
         </div>
