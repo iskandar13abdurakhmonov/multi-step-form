@@ -51,7 +51,7 @@ const PersonalInfo = () => {
           name="phone"
           id="phone"
           label="Phone Number"
-          placeholder="e.g. +1 234 567 890"
+          placeholder="type: 1234567"
           value={formData.phone}
           onChange={handleChange}
           error={errors.phone}

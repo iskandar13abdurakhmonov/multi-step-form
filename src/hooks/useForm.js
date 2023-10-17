@@ -29,7 +29,7 @@ const useForm = () => {
                     newErrors[field] = 'Invalid email address'
                 }
             } else if (field === 'phone') {
-                if (!/^\d{12}$/.test(value)) {
+                if (!/^\d{7}$/.test(value)) {
                     newErrors[field] = 'Invalid phone number'
                 }
             }
