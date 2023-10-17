@@ -93,10 +93,10 @@
   
   :global #back {
     background-color: var(--magnolia);
-    color: var(--cool-gray);
+    color: #98999D;
   }
   
   :global #back:hover {
-    color: var(--marine-blue);
+    color: #98999D;
   }
   

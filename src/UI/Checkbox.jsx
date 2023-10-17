@@ -30,6 +30,7 @@ const Checkbox = ({ options, value, setValue }) => {
             <input
               id={index}
               type="checkbox"
+              className={styles.checkbox}
               value={option.name}
               checked={isChecked}
               onChange={handleChange}
