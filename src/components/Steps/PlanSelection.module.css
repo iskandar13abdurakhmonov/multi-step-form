@@ -31,7 +31,7 @@
     border: 1px solid #524E91;
     padding: 1rem;
     border-radius: 0.5rem;
-    width: calc((100% - 2rem) / 3);
+    width: 136px;
     cursor: pointer;
   }
   

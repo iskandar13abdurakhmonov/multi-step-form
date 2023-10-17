@@ -3,7 +3,7 @@ import style from './FormHeader.module.css'
 
 const FormHeader = ({ title, info }) => {
     return (
-        <div>
+        <div className={style.header}>
             <h1 className={style.title}>{title}</h1>
             <p className={style.info}>{info}</p>
         </div>

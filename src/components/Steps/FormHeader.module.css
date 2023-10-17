@@ -1,5 +1,9 @@
+.header {
+    margin: 0 0 46px 0;
+}
+
 .title {
-    margin: 0 0 0 0;
+    margin: 0 0 20px 0;
     font-weight: 700;
     color: #06275A;
 }
